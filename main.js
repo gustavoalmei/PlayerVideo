@@ -1,9 +1,13 @@
 let video = document.getElementById('video')
-let rangeVolume = document.getElementById('VolumeVideo')
 let VolumeVideo = document.getElementById('VolumeVideo')
 let bttnVol = document.getElementById('bttnVol')
-let controller = document.getElementById('controller')
-let container = document.querySelector('.container')
+let controllers = document.querySelector('.controllers')
+let controller = document.querySelector('.controller')
+let hiddenControll = document.querySelector('.hiddenControll')
+
+window.onload = ()=>{
+  video.volume = 0.2;
+}
 
 function teste() {
   video.classList('hiddenController')
@@ -26,11 +30,14 @@ VolumeVideo.addEventListener('input', () => {
   video.volume = VolumeVideo.value / 100
 })
 
-bttnVol.addEventListener('mouseup', () => {
-  VolumeVideo.classList.toggle('VolumeVideoShow')
+controllers.addEventListener('mouseover', () => {
+  VolumeVideo.classList.toggle('VolumeVideoHidden')
 })
 
-// container.addEventListener('click', () => {
-//   controller.classList.toggle('controllerHidden')
-//   setInterval(500, classList.toggle('controllerHidden'))
-// })
+controllers.addEventListener('mouseout', () => {
+  VolumeVideo.classList.toggle('VolumeVideoHidden')
+})
+
+hiddenControll.addEventListener("click", ()=>{
+  controllers.classList.toggle('hiddenControllers')
+})
