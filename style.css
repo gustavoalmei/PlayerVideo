@@ -77,3 +77,11 @@ main {
   margin: 0 10px;
   cursor: pointer;
 }
+
+input[type="range"]{
+  position: absolute;
+  accent-color:black;
+  right: 135px;
+  bottom: 105px;
+  transform: rotate(270deg);
+}
