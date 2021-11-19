@@ -55,18 +55,18 @@ function playVideo(){
     return playing = false
   }
 }
-
+// avançar 10s
 function advanced(){
   videoAudio.currentTime += 10
 }
-
+// alterar tmepo do video
 function changeTime(){
   videoAudio.currentTime = progress.value
 }
 
+// controle de audio e som
 let soundMuted = false
 
-// controle de audio e som
 function ChangeVolume() {
   videoAudio.volume = volumeInput.value / 100
 
@@ -105,15 +105,15 @@ function mute() {
     volumeInput.value = 0
   }
 }
-
+// esconder volume
 function hiddenvol(){
   controlVol.style.display = "none"
 }
-
+// mostrar volume
 function shownvol(){
   controlVol.style.display = "flex"
 }
-
+// add volume default
 window.onload = ()=>{
   videoAudio.volume = 0.5
 }
