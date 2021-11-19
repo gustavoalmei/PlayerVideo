@@ -4,54 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Player</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Player Video</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/img/video-regular-24.png" type="image/x-icon">
   </head>
   <body>
     <main>
       <div class="container">
-        <video
-          id="video"
-          src="assets/video/Tillmann_-_AUGE_ft_Caio_Luccas_Prod__yungdrum - 10Convert.com.mp4.mp4"
-        ></video>
+        <div>
+          <video id="videoAudio" >
+            <source src="assets/video/Tillmann_-_AUGE_ft_Caio_Luccas_Prod__yungdrum - 10Convert.com.mp4.mp4" type="video/mp4">
+          </video>
+        </div>
         <div id="controller" class="controller">
           <div class="controllers">
-            <img
-            onclick="StartPlayer()"
-            class="bttn"
-            src="assets/img/play.png"
-            alt="Button Play"
-          />
-          <img
-            onclick="PausePlayer()"
-            class="bttn"
-            src="assets/img/pause.png"
-            alt="Button Pause"
-          />
-          <img
-            onclick="StopPlayer()"
-            class="bttn"
-            src="assets/img/stop.png"
-            alt="Button Stop"
-          />
-          <img
-            id="bttnVol"
-            class="bttn"
-            src="assets/img/volume.png"
-            alt="Button Volume"
-          />
-          <input
-            type="range"
-            id="VolumeVideo"
-            class="VolumeVideo"
-            aria-valuemax="100"
-            aria-valuemin="0"
-            value="10"
-            step="5"
-          />
+            <img id="playPause" class="bttn" src="assets/img/play-circle-regular-50.png" alt="Play">
+            <img id="fastForward" class="bttn" src="assets/img/fast-forward-circle-regular-48.png" alt="Fast Forward">
+            <img id="volumeVideo" onclick="mute()" class="bttn" src="assets/img/volume-full-regular-50.png" alt="Volume">
           </div>
-          <div class="hiddenControll">
-            <img src="./assets/img/arrow.png.png" alt="">
+          <div class="progress">
+            <span id="timeLive">00:00</span>
+            <input type="range" id="progress" />
+            <span id="timeMax">00:00</span>
+          </div>
+          <div class="controlVol">
+            <input id="volumeInput" type="range" max="100" min="0" step="5" >
           </div>
         </div>
       </div>

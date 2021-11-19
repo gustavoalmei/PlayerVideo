@@ -27,61 +27,58 @@ main {
   border-radius: 10px;
 }
 
+#videoAudio{
+  position: relative;
+}
+
 .controller {
-  transform: translateY(-130%);
-  width: 550px;
-  margin: auto;
-  text-align: center;
-}
-
-.controllers{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
   width: 100%;
-}
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
 
-.hiddenControll img {
-  width: 30px;
-  transition: linear 0.3s;
-  transform: rotate(0);
-}
-
-.hiddenControllers{
-  width: 10px;
-  display: none;
-
-}
-
-.hiddenControllers + .hiddenControll img{
-  transition: linear 0.3s;
-  transform: rotate(180deg) ;
-}
-
-.VolumeVideo {
-  bottom: 100px;
-  right: 515px;
-  width: 100px;
-  margin-right: 20px;
-  display: none;
-}
-
-.VolumeVideoHidden{
-  display: block;
-  width: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
 }
 
 .bttn {
   width: 30px;
-  margin: 0 10px;
+  margin: 0 5px;
   cursor: pointer;
 }
 
-input[type="range"]{
-  position: absolute;
+.controllers{
+  width: 12%;
+}
+
+.progress{
+  width: 100%;
+}
+
+#progress{
   accent-color:black;
-  right: 135px;
-  bottom: 105px;
+  width: 90%;
+}
+
+input[type="range"]{
+  accent-color:black;
+}
+
+.controlVol{
+  background-color: white;
+  width: 150px;
+  height: 50px;
   transform: rotate(270deg);
+  position: absolute;
+  left: 40px;
+  bottom: 90px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
